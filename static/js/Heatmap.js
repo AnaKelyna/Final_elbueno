@@ -1,4 +1,4 @@
-const heat ="http://127.0.0.1:5000/graph/heatmap"
+const heat ="http://127.0.0.1:5000/graph/heat_map"
 
 // set the dimensions and margins of the graph
 var margin = {top: 80, right: 25, bottom: 30, left: 90},
