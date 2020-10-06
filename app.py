@@ -170,7 +170,7 @@ def department():
     pie_department_df.sort_values(by=["Total_department"],inplace=True,ascending=False)
     pie_department_df1 = pie_department_df.iloc[0:10,:]
     department_other= pie_department_df.Total_department.iloc[10:].sum()
-    df_append = pd.DataFrame({"department":["Other"],"Total_department":[deparment_other]})
+    df_append = pd.DataFrame({"department":["Other"],"Total_department":[department_other]})
     pie_department_df1 = pie_department_df1.append(df_append,ignore_index=True)
 
 
