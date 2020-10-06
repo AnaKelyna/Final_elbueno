@@ -48,6 +48,8 @@ Orders = Base.classes.orders_tbl
 OrdersP = Base.classes.orders_product_prior
 OrdersT = Base.classes.orders_product_train
 ProductL= Base.classes.product_list
+DepartmentL= Base.classes.dep_tbl
+AisleL= Base.classes.ais_tbl
 
 #################################################
 # Flask Setup
@@ -131,11 +133,7 @@ def neworder(item1,item2=None,item3=None):
 @app.route("/graph/aisle")
 def aisle():
     session = Session(engine)
-    query = f"select aisle_tbl.aisle, count(orders_product_prior.order_id) from aisle_tbl\
-            inner join product_tbl on product_tbl.aisle_id = aisle_tbl.aisle_id\
-            inner join orders_product_prior on orders_product_prior.product_id=product_tbl.product_id\
-            group by aisle_tbl.aisle"
-    results = engine.execute(query).fetchall()
+    results = session.query(AisleL.aisle,AisleL.count).all()
     aisle = []
     order_count = []
     for result in results:
@@ -161,11 +159,7 @@ def aisle():
 @app.route("/graph/department")
 def department():
     session = Session(engine)
-    query = f"select department_tbl.department, count(orders_product_prior.order_id) from department_tbl\
-                inner join product_tbl on product_tbl.department_id = department_tbl.deparment_id\
-                inner join orders_product_prior on orders_product_prior.product_id=product_tbl.product_id\
-                group by department_tbl.department"
-    results = engine.execute(query).fetchall()
+    results = session.query(DepartmentL.department,DepartmentL.count).all()
     department = []
     order_count = []
     for result in results:
