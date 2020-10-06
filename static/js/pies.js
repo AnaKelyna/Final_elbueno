@@ -1,5 +1,5 @@
-const url = "https:5000//127.0.0.1/graph/department";
-const url2 = "https:5000//127.0.0.1/graph/asile";
+const url = "http://127.0.0.1:5000/graph/department";
+const url2 = "http://127.0.0.1:5000/graph/asile";
 
 // Fetch the JSON data and console log it
 

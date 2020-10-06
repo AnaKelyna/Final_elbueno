@@ -1,4 +1,4 @@
-const url3 = "https:5000//127.0.0.1/graph/product";
+const url3 = "http://127.0.0.1:5000/graph/product";
 
 d3.json(url3).then(function(json) {
 
