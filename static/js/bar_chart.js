@@ -16,8 +16,6 @@ d3.json(url3).then(function(json) {
 
     var x = products
     var y = num_prod
-    console.log(x)
-    console.log(y)
 
     // Create the Trace
     var trace1 = {
@@ -31,8 +29,8 @@ d3.json(url3).then(function(json) {
     // Define the plot layout
     var layout = {
         title: "Top 10 best sellers",
-        height: 600,
-        width: 400,
+        height: 500,
+        width: 750,
         xaxis: {
             title: "products",
         },
