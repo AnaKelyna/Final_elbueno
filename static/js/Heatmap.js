@@ -110,4 +110,4 @@ svg.append("text")
     .attr("y", -50)
     .attr("text-anchor", "left")
     .style("font-size", "22px")
-    .text("Day of the week vs Hours vs Total of orderes");
+    .text("Day of the week & Hours (Total of orders)");
