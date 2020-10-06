@@ -35,7 +35,7 @@ d3.json(url3).then(function(json) {
             title: "orders",
             type: 'integer'
         },
-        colorscale: 'Viridis',
+        color: 'green',
     };
 
     // Plot the chart to a div tag with id "bar-plot"
