@@ -34,7 +34,8 @@ d3.json(url3).then(function(json) {
         yaxis: {
             title: "orders",
             type: 'integer'
-        }
+        },
+        colorscale: 'Viridis',
     };
 
     // Plot the chart to a div tag with id "bar-plot"
