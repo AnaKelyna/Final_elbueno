@@ -26,3 +26,7 @@ body {
 .text {
     color: rgb(11, 14, 35);
 }
+
+.list-inline-item {
+    font-family: 'Schoolbell', arial, serif;
+}
