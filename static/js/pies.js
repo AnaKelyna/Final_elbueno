@@ -14,12 +14,11 @@ var total_ai = [];
 d3.json(url).then(function(json) {
     json.forEach(function(data) {
         departments.push(data.department);
-        total_dep.push(data.Total_departments);
+        total_dep.push(data.Total_department);
     });
 
 });
-console.log(departments)
-console.log(total_dep)
+
 d3.json(url2).then(function(json) {
     json.forEach(function(data) {
         aisle2.push(data.aisle);
@@ -27,35 +26,13 @@ d3.json(url2).then(function(json) {
     });
 
 });
-console.log(aisle2)
-console.log(total_ai)
 
 
-
-function init() {
-
-    var data = [{
-        values: total_dep,
-        labels: departments,
-        type: "pie"
-    }];
-
-    var layout = {
-        height: 500,
-        width: 700,
-        title: "Top 10 departments (orders by department)"
-    };
-
-    Plotly.newPlot("pie1", data, layout);
-}
-
-
-d3.selectAll("#selDep").on("click", getData);
 
 function getData() {
     var deps_text = new Array();
     deps_text.push(`Sam uses the app to order, specially, perishables.
-32.6% of all orders come from the produce and dairy eggs departments.`);
+    32.6% of all orders come from the produce and dairy eggs departments.`);
     d3.select("#chart-text").html("");
     d3.select("#chart-text")
         .selectAll("h3")
@@ -78,7 +55,7 @@ function getData() {
         var layout = {
             height: 500,
             width: 700,
-            title: "Top 10 departments (orders by department)"
+            title: "Top 10 departments"
         };
 
         Plotly.newPlot("pie1", data, layout);
@@ -86,7 +63,6 @@ function getData() {
     init2();
 };
 
-d3.selectAll("#selPro").on("click", getData2);
 
 function getData2() {
     var deps_text = new Array();
@@ -114,13 +90,14 @@ The top 10 products account for the 38.5% of the total orders`);
         var layout = {
             height: 500,
             width: 700,
-            title: "Top 10 aisle (orders by aisle)"
+            title: "Top 10 aisle"
         };
 
         Plotly.newPlot("pie1", data, layout);
     }
     init3();
 };
-init();
-
-// Create an array of music provider labels
+d3.selectAll("#selPro").on("click", getData2);
+d3.selectAll("#selDep").on("click", getData);
+getData()
+    // Create an array of music provider labels

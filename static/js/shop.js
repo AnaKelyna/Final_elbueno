@@ -14,8 +14,6 @@ function init() {
             product.push(item.product_name);
         });
 
-        console.log(product)
-
         var options = dropDownList1.selectAll("option")
             .data(product)
             .enter()

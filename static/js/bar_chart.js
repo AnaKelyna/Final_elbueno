@@ -30,10 +30,7 @@ d3.json(url3).then(function(json) {
     var layout = {
         title: "Top 10 best sellers",
         height: 500,
-        width: 750,
-        xaxis: {
-            title: "products",
-        },
+        width: 800,
         yaxis: {
             title: "orders",
             type: 'integer'
