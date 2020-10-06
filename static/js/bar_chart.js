@@ -22,6 +22,7 @@ d3.json(url3).then(function(json) {
         x: x,
         y: y,
         type: "bar",
+        color: 'green'
     };
     // Create the data array for the plot
     var data1 = [trace1];
@@ -35,7 +36,6 @@ d3.json(url3).then(function(json) {
             title: "orders",
             type: 'integer'
         },
-        color: 'green',
     };
 
     // Plot the chart to a div tag with id "bar-plot"
