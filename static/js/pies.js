@@ -1,5 +1,5 @@
-const url = "https://raw.githubusercontent.com/Jrfelix13/Final-Project/master/Data_sitio/department.json";
-const url2 = "https://raw.githubusercontent.com/Jrfelix13/Final-Project/master/Data_sitio/aisle.json";
+const url = "https:5000//127.0.0.1/graph/department";
+const url2 = "https:5000//127.0.0.1/graph/asile";
 
 // Fetch the JSON data and console log it
 
