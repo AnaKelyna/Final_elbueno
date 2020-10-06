@@ -34,7 +34,7 @@ d3.json(url3).then(function(json) {
         height: 600,
         width: 400,
         xaxis: {
-            title: "Sample values",
+            title: "products",
         },
         yaxis: {
             title: "orders",
