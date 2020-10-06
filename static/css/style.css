@@ -26,9 +26,3 @@ body {
 .text {
     color: rgb(11, 14, 35);
 }
-
-.row {
-    align-content: center;
-    align-self: center;
-    align-items: center;
-}
