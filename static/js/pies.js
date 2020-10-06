@@ -66,8 +66,8 @@ function getData() {
 
 function getData2() {
     var deps_text = new Array();
-    deps_text.push(`She buys grocery for week meals but sometimes also other products for party supplies like snacks and drinks
-The top 10 products account for the 38.5% of the total orders`);
+    deps_text.push(`She buys grocery for week meals but sometimes she buys from aisles for party supplies like snacks and drinks
+The top 10 aisles account only for the 38.5% of the total orders`);
     d3.select("#chart-text").html("");
     d3.select("#chart-text")
         .selectAll("h3")
@@ -90,7 +90,7 @@ The top 10 products account for the 38.5% of the total orders`);
         var layout = {
             height: 500,
             width: 700,
-            title: "Top 10 aisle"
+            title: "Top 10 Aisles"
         };
 
         Plotly.newPlot("pie1", data, layout);
