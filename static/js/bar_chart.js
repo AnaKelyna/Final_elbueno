@@ -22,7 +22,7 @@ d3.json(url3).then(function(json) {
         x: x,
         y: y,
         type: "bar",
-        color: 'green'
+        color: 'green',
     };
     // Create the data array for the plot
     var data1 = [trace1];
